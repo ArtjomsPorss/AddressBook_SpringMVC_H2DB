@@ -75,7 +75,7 @@ Webpages that we see in the browser are compiled from JSP files (*JSP stands for
 JSP files are located in **src/main/webapp/WEB-INF/jsp/** folder
 They contain HTML + JSTL tags for use of if/else statements + Spring forms for sumbiting data to Spring Controllers
 ## Resources
-Resources can be CSS, JavaScript, Fonts etc..
+Resources can be folders with CSS, JavaScript files etc..
 They are located in **src/main/webapp/resources/**
 ## Method calls
 ### From Browser to Database
