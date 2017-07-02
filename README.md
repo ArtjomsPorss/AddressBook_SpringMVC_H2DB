@@ -12,8 +12,8 @@ When application runs you have following functionalities:
 Home screen -> Create Entry -> *fill in details* -> Add Entry -> *a list of entries is displayed*
 ![create entries](https://user-images.githubusercontent.com/11411618/27771905-36df359e-5f50-11e7-8fe4-d5f14fc72f08.gif)
 ### Searching for Entries & Editing Entries
-Home screen -> 
-
+Home screen -> Search For Entries -> *type letters to search for* -> Find Entry -> *list of entries opens* -> Edit -> *edit details* -> Update Entry -> *updated list is displayed*
+![editing entries](https://user-images.githubusercontent.com/11411618/27772236-e0c15a24-5f55-11e7-80b9-7a7399b74e46.gif)
 
 ## Techs used
 It Utilises following technologies:
