@@ -8,9 +8,12 @@ You can download this code, import to [STS](https://spring.io/tools/sts/all)(it'
 
 ## Usage Examples
 When application runs you have following functionalities:
-### Adding entries
+### Adding Entries
 Home screen -> Create Entry -> *fill in details* -> Add Entry -> *a list of entries is displayed*
 ![create entries](https://user-images.githubusercontent.com/11411618/27771905-36df359e-5f50-11e7-8fe4-d5f14fc72f08.gif)
+### Searching for Entries & Editing Entries
+Home screen -> 
+
 
 ## Techs used
 It Utilises following technologies:
