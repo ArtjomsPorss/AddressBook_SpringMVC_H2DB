@@ -78,14 +78,14 @@ They contain HTML + JSTL tags for use of if/else statements + Spring forms for s
 Resources can be CSS, JavaScript, Fonts etc..
 They are located in **src/main/webapp/resources/**
 ## Method calls
-### From Browser
+### From Browser to Database
 * Browser *button is clicked* -> 
 * ApplicationController -> 
 * ApplicationService -> 
 * AddressBookRepositoryJdbcImpl -> 
 * DAO files *Store entry to database or retreive entry from database*
 *DAO stands for Data Access Object class. In this applciation they are classes with single responsibility, e.g. AddEntryDAO only adds new entry to database, GetAllEntriesDAO retreives all entries from the database*
-### Back to Browser
+### From Database Back to Browser
 * DAO file *returns entry* ->
 * AddressBookRepositoryJdbcImpl ->
 * ApplicationService ->
