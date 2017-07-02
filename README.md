@@ -63,16 +63,25 @@ This application is run on Tomcat Server from within STS. In order to do so, we 
 * STS should stop at debugging breakpoints you set
 * Explore the application structure by traversing in/out through application methods
 
-### Project Structure
+# Project Structure
 * *config* package contains Spring configuration
 * *controller* package contains MVC controller. Basically it handles any button clicks from the browser. You can debug it's methods with STS to explore method calls and overall application architecture
 * *persistence* handles database layer of the app
 * *persistence/jdbc* contains specific JDBC calls to the database
 * *service* is a glue between *persistence* and *controller* layers of the app. It's responsibility is to pass and modify entries between *controller*, which handles UI, and *persistence* to store to/retreive from the database.
 
-### Method calls
-**From Browser:**
-Browser -> ApplicationController -> ApplicationService -> AddressBookRepositoryJdbcImpl -> DAO files -> Store entry to database or retreive entry from database
+## Method calls
+### From Browser
+* Browser *button is clicked* -> 
+* ApplicationController -> 
+* ApplicationService -> 
+* AddressBookRepositoryJdbcImpl -> 
+* DAO files Store entry to database or retreive entry from database
 *DAO stands for Data Access Object class. In this applciation they are classes with single responsibility, e.g. AddEntryDAO only adds new entry to database, GetAllEntriesDAO retreives all entries from the database*
-**Back to Browser:**
-DAO file *returns entry* -> AddressBookRepositoryJdbcImpl -> ApplicationService -> ApplicationController *stores entry in Model object* -> JSP's html tables and values get populated by entry data -> Browser
+### Back to Browser
+* DAO file *returns entry* ->
+* AddressBookRepositoryJdbcImpl ->
+* ApplicationService ->
+* ApplicationController *stores entry in Model object* ->
+* JSP's html tables and values get populated by entry data ->
+* Browser
