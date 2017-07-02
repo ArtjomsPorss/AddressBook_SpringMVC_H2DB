@@ -72,6 +72,7 @@ This application is run on Tomcat Server from within STS. In order to do so, we 
 
 ### Method calls
 **From Browser:**
-Browser -> ApplicationController -> ApplicationService -> AddressBookRepositoryJdbcImpl -> DAO files -> Store to database
+Browser -> ApplicationController -> ApplicationService -> AddressBookRepositoryJdbcImpl -> DAO files -> Store entry to database or retreive entry from database
 *DAO stands for Data Access Object class. In this applciation they are classes with single responsibility, e.g. AddEntryDAO only adds new entry to database, GetAllEntriesDAO retreives all entries from the database*
-**Back from DB**
+**Back to Browser:**
+DAO file *returns entry* -> AddressBookRepositoryJdbcImpl -> ApplicationService -> ApplicationController *stores entry in Model object* -> JSP's html tables and values get populated by entry data -> Browser
