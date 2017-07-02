@@ -70,14 +70,20 @@ This application is run on Tomcat Server from within STS. In order to do so, we 
 * *persistence* handles database layer of the app
 * *persistence/jdbc* contains specific JDBC calls to the database
 * *service* is a glue between *persistence* and *controller* layers of the app. It's responsibility is to pass and modify entries between *controller*, which handles UI, and *persistence* to store to/retreive from the database.
-
+## Views
+Webpages that we see in the browser are compiled from JSP files (*JSP stands for Java Server Pages. They get compiled on the server into HTMLs and sent to the browser*)
+JSP files are located in **src/main/webapp/WEB-INF/jsp/** folder
+They contain HTML + JSTL tags for use of if/else statements + Spring forms for sumbiting data to Spring Controllers
+## Resources
+Resources can be CSS, JavaScript, Fonts etc..
+They are located in **src/main/webapp/resources/**
 ## Method calls
 ### From Browser
 * Browser *button is clicked* -> 
 * ApplicationController -> 
 * ApplicationService -> 
 * AddressBookRepositoryJdbcImpl -> 
-* DAO files Store entry to database or retreive entry from database
+* DAO files *Store entry to database or retreive entry from database*
 *DAO stands for Data Access Object class. In this applciation they are classes with single responsibility, e.g. AddEntryDAO only adds new entry to database, GetAllEntriesDAO retreives all entries from the database*
 ### Back to Browser
 * DAO file *returns entry* ->
