@@ -64,6 +64,7 @@ This application is run on Tomcat Server from within STS. In order to do so, we 
 * Explore the application structure by traversing in/out through application methods
 
 # Project Structure
+## Packages
 * *config* package contains Spring configuration
 * *controller* package contains MVC controller. Basically it handles any button clicks from the browser. You can debug it's methods with STS to explore method calls and overall application architecture
 * *persistence* handles database layer of the app
