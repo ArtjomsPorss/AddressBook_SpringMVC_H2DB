@@ -27,7 +27,8 @@ It Utilises following technologies:
 * JSP, Bootstrap
 * Maven (version 3.5) Build Tool
 * Tomcat (version 8.5)
-* H2 (version 1.4.195) database to store Address Book Entres
+* H2 (version 1.4.195) database to store Address Book Entries
+
 I guess, newer versions of tools can be used as well, but just for stable experience I would stick with versions I used.
 
 ## Using this project
