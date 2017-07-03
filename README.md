@@ -93,3 +93,11 @@ They are located in **src/main/webapp/resources/**
 * ApplicationController *stores entry in Model object* ->
 * JSP's html tables and values get populated by entry data ->
 * Browser
+## Spring Configuration
+I think, the hardest part in creating Spring application is the configuration. Once it's done and the application is running - the rest is just pure joy of developing functionalities: adding webpages, styling them, creating Controller and Service methods to support UI calls, writing SQL queries to store/modify/retreive database data.
+In this project Spring configuration is scattered over 3 classes inside *config* package:
+* PersistenceConfig - contains database configuration. It will create database on startup if doesn't exist yet.
+* WebApplicationInitializerImpl - creates dispatcher servlet. It will handle URL requests that end with *.html*
+* WebConfig - adds to application: folder with JSP views, folders with JS, CSS resources
+
+Spring Configuration is the hardest part for me and I will need to spend some more time understanding it.
