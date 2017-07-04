@@ -37,7 +37,7 @@ I guess, newer versions of tools can be used as well, but just for stable experi
 * Download and install [Maven](https://maven.apache.org/download.cgi) build Tool
 * Download and unzip [Tomcat](https://tomcat.apache.org/) application Server
 * Download and install/unzip [STS](https://spring.io/tools/sts/all)(it's a flavour of Eclipse IDE)
-* I think Maven dependency management inside project will automatically download H2 database library and there is no need to install it. Otherwise, download it [here](http://www.h2database.com/html/main.html) and unzip.
+* Download and unzip [H2](http://www.h2database.com/html/main.html) database.
 ### Running STS and importing the project
 * Run STS and create a workspace
 * Download and extract **AddressBook_SpringMVC_H2DB** project to workspace folder
@@ -46,6 +46,33 @@ I guess, newer versions of tools can be used as well, but just for stable experi
 ### Adding Tomcat Server to STS
 This application is run on Tomcat Server from within STS. In order to do so, we need to create a Server entry withing STS.
 * *right-click in Servers tab on the bottom left of STS* -> New -> Server -> Apache -> *pick Tomcat with version you downloaded, 8.5 in my case* -> Next -> *Click on imported project and click Add* -> Finish -> *in servers tab newly created Tomcat server will be listed*
+### Creating database
+We will create address_book database and ENTRIES table in it. Without it our application won't work.
+* Navigate to downloaded and unzipped h2 folder **/h2/bin/** and run **h2-1.4.195.jar** or it may have different numbers in name due to different version
+* A database console should open up in the browser. Fill it with details as follows:
+
+![021 database console](https://user-images.githubusercontent.com/11411618/27842266-50d63572-6100-11e7-96be-8f844be84bc2.JPG)
+* Press **Connect**
+* A H2 Console should open up:
+![022 console open](https://user-images.githubusercontent.com/11411618/27842689-1f52b134-6104-11e7-83ce-5a9bf6f434c4.jpg)
+* Enter following query and run it:
+```
+CREATE TABLE ENTRIES (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(255),
+SURNAME VARCHAR(255),
+ADDRESS VARCHAR(255),
+PHONE_NUMBER VARCHAR(255),
+EMAIL VARCHAR(255),
+ZIP VARCHAR(255)
+);
+```
+![023 console with query](https://user-images.githubusercontent.com/11411618/27842690-1f5386b8-6104-11e7-965c-ce4ebd5ce36d.jpg)
+* It should create ENTRIES table:
+![024 console with table](https://user-images.githubusercontent.com/11411618/27842691-1f552072-6104-11e7-8380-0e7bba543f32.jpg)
+* Now press red button in top-left of H2 Console to disconnet from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
+
+
 ### Running Application
 * click on Tomcat server in Servers tab
 * click button with play icon in Servers tab
