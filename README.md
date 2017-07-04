@@ -67,11 +67,9 @@ EMAIL VARCHAR(255),
 ZIP VARCHAR(255)
 );
 ```
-![023 console with query](https://user-images.githubusercontent.com/11411618/27842690-1f5386b8-6104-11e7-965c-ce4ebd5ce36d.jpg)
-* It should create ENTRIES table:
+* It should create ENTRIES table (look at top left):
 ![024 console with table](https://user-images.githubusercontent.com/11411618/27842691-1f552072-6104-11e7-8380-0e7bba543f32.jpg)
-* Now press red button in top-left of H2 Console to disconnet from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
-
+* Now press red button in very top-left of H2 Console to ##disconnect## from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
 
 ### Running Application
 * click on Tomcat server in Servers tab
