@@ -50,7 +50,6 @@ This application is run on Tomcat Server from within STS. In order to do so, we 
 We will create address_book database and ENTRIES table in it. Without it our application won't work.
 * Navigate to downloaded and unzipped h2 folder **/h2/bin/** and run **h2-1.4.195.jar** or it may have different numbers in name due to different version
 * A database console should open up in the browser. Fill it with details as follows:
-
 ![021 database console](https://user-images.githubusercontent.com/11411618/27842266-50d63572-6100-11e7-96be-8f844be84bc2.JPG)
 * Press **Connect**
 * A H2 Console should open up:
@@ -69,8 +68,7 @@ ZIP VARCHAR(255)
 ```
 * It should create ENTRIES table (look at top left):
 ![024 console with table](https://user-images.githubusercontent.com/11411618/27842691-1f552072-6104-11e7-8380-0e7bba543f32.jpg)
-* Now press red button in very top-left of H2 Console to ##disconnect## from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
-
+* Now press red button in very top-left of H2 Console to **disconnect** from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
 ### Running Application
 * click on Tomcat server in Servers tab
 * click button with play icon in Servers tab
