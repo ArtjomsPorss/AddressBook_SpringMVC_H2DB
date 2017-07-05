@@ -47,14 +47,14 @@ I guess, newer versions of tools can be used as well, but just for stable experi
 This application is run on Tomcat Server from within STS. In order to do so, we need to create a Server entry withing STS.
 * *right-click in Servers tab on the bottom left of STS* -> New -> Server -> Apache -> *pick Tomcat with version you downloaded, 8.5 in my case* -> Next -> *Click on imported project and click Add* -> Finish -> *in servers tab newly created Tomcat server will be listed*
 ### Creating database
-We will create address_book database and ENTRIES table in it. Without it our application won't work.
-* Navigate to downloaded and unzipped h2 folder **/h2/bin/** and run **h2-1.4.195.jar** or it may have different numbers in name due to different version
-* A database console should open up in the browser. Fill it with details as follows:
+Let's create **address_book** database and **ENTRIES** table in it. Without this application won't work.
+* Navigate to downloaded and unzipped h2 folder **/h2/bin/** and run **h2-1.4.195.jar** or it may have different numbers in name due to a different version
+* A database console login page should open up in the browser. Fill it with details as follows:
 ![021 database console](https://user-images.githubusercontent.com/11411618/27842266-50d63572-6100-11e7-96be-8f844be84bc2.JPG)
 * Press **Connect**
 * A H2 Console should open up:
 ![022 console open](https://user-images.githubusercontent.com/11411618/27842689-1f52b134-6104-11e7-83ce-5a9bf6f434c4.jpg)
-* Enter following query and run it:
+* Enter following query and press **Run**:
 ```
 CREATE TABLE ENTRIES (
 ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -66,9 +66,9 @@ EMAIL VARCHAR(255),
 ZIP VARCHAR(255)
 );
 ```
-* It should create ENTRIES table (look at top left):
+* It should table named "ENTRIES" (look at top left):
 ![024 console with table](https://user-images.githubusercontent.com/11411618/27842691-1f552072-6104-11e7-8380-0e7bba543f32.jpg)
-* Now press red button in very top-left of H2 Console to **disconnect** from database. IT IS IMPORTANT TO DO THIS! Otherwise Application won't work because it uses same connection as H2 Console login.
+* Now press red button in very top-left of H2 Console to disconnect from database. **IT IS IMPORTANT TO DO THIS!** Otherwise Application won't work, I guess because it uses same connection(login details) as we used to enter H2 Console.
 ### Running Application
 * click on Tomcat server in Servers tab
 * click button with play icon in Servers tab
@@ -77,7 +77,6 @@ ZIP VARCHAR(255)
 * once Server startup finished the console will display something like *INFO: Server startup in 12508 ms*
 * go to application URL: **http://localhost:8080/AddressBook_SpringMVC_H2DB/home.html**
 * use the app
-
 ## What's next?
 ### Learning by Debugging
 * Set some breakpoints in all ApplicationController.java methods
@@ -86,7 +85,6 @@ ZIP VARCHAR(255)
 * click on any application buttons
 * STS should stop at debugging breakpoints you set
 * Explore the application structure by traversing in/out through application methods
-
 # Project Structure
 ## Packages
 * *config* package contains Spring configuration
